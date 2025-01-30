@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import React, { useRef, useState } from "react";
 import gsap from "gsap";
+import Chatbot from "./components/Chatbot";
 
 export default function Home() {
   const sidebarRef = useRef(null);
@@ -14,10 +15,10 @@ export default function Home() {
     if (sidebarRef.current) {
       setIsExpanded((prev) => !prev);
       setIcon(isExpanded ? faBars : faXmark);
-      {
-        let sidebarContent = document.getElementById("sidebarContent");
-        sidebarContent.classList.toggle("hidden");
-      }
+      // {
+      //   let sidebarContent = document.getElementById("sidebarContent");
+      //   sidebarContent.classList.toggle("hidden");
+      // }
 
       if (!isExpanded) {
         gsap.to(sidebarRef.current, {
@@ -48,7 +49,7 @@ export default function Home() {
         gsap.to("#sidebarContent", { autoAlpha: 0, x: -50, duration: 0.3 });
         gsap.to(sidebarRef.current, {
           width: "0px",
-          duration: 0.1,
+          duration: 0.2,
           ease: "power2.inOut",
         });
       }
@@ -59,8 +60,7 @@ export default function Home() {
     <>
       <Navbar Sidebarbtn={Sidebarbtn} icon={icon} />
       <Sidebar ref={sidebarRef} />
-
-      
+      <Chatbot></Chatbot>
     </>
   );
 }
