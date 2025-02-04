@@ -25,6 +25,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/chatbot logo.png" />
+        <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
