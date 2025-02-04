@@ -1,4 +1,4 @@
-"use client";
+
 import React, { forwardRef } from "react";
 
 const Sidebar = forwardRef((props, ref) => {

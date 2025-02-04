@@ -6,6 +6,7 @@ import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import Chatbot from "./components/Chatbot";
 
+
 export default function Home() {
   const sidebarRef = useRef(null);
   const [icon, setIcon] = useState(faBars);
@@ -15,11 +16,7 @@ export default function Home() {
     if (sidebarRef.current) {
       setIsExpanded((prev) => !prev);
       setIcon(isExpanded ? faBars : faXmark);
-      // {
-      //   let sidebarContent = document.getElementById("sidebarContent");
-      //   sidebarContent.classList.toggle("hidden");
-      // }
-
+     
       if (!isExpanded) {
         gsap.to(sidebarRef.current, {
           width: "250px",
@@ -55,6 +52,8 @@ export default function Home() {
       }
     }
   };
+
+
 
   return (
     <>
