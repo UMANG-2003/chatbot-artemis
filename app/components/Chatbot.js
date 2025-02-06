@@ -19,6 +19,54 @@ function Chatbot() {
       message: null,
     };
 
+    const API_KEY = "AIzaSyDZNehi_jPx7HK5ZT9WjoYZnPqFUx79w1Y";
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+    const generateBotResponse = async (messageContainer) => {
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: dataMessage.message }],
+            },
+          ],
+        }),
+      };
+      try {
+        const response = await fetch(API_URL, requestOptions);
+        {
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error.message);
+          const apiResponse =
+            data.candidates[0]?.content.parts[0]?.text?.trim() ||
+            "Sorry, I couldn't understand that.";
+          messageContainer.innerHTML = "";
+
+          const botMessageDiv = document.createElement("div");
+          botMessageDiv.classList.add(
+            "bot-message",
+            "border-2",
+            "border-gray-500",
+            "bg-slate-200",
+            "max-w-44",
+            "text-gray-700",
+            "text-xs",
+            "px-2",
+            "py-1",
+            "font-semibold",
+            "rounded-lg",
+            "rounded-bl-none"
+          );
+          botMessageDiv.innerText = apiResponse;
+          messageContainer.appendChild(botMessageDiv);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const handleKeyDown = (e) => {
       const message = e.target.value.trim();
       if (e.key === "Enter" && message) {
@@ -106,8 +154,10 @@ function Chatbot() {
               }
             );
           }
-        },0);
-      }, 500);
+        }, 0);
+
+        generateBotResponse(messageContainer);
+      }, 700);
     };
 
     const createMessageElement = (content, classes) => {
