@@ -211,7 +211,7 @@ function Chatbot() {
           </span>
         </div>
 
-        <div className="overflow-y-auto h-[55vh] overflow-x-hidden chatbot-container">
+        <div className="overflow-y-auto h-[52vh] overflow-x-hidden chatbot-container">
           <div className="chatbot-body p-2 w-full text-sm ">
             <div className="flex gap-2  my-2">
               <img
