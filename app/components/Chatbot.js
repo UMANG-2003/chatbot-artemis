@@ -15,6 +15,7 @@ function Chatbot() {
     const messageInput = document.querySelector("#message-input");
     const chatBotBody = document.querySelector(".chatbot-body");
     const submitChatbtn = document.querySelector("#submit-chat");
+    const chatbotContainer = document.querySelector(".chatbot-container");
     const dataMessage = {
       message: null,
     };
@@ -98,6 +99,14 @@ function Chatbot() {
       outGoingMessageDiv.querySelector(".message-text").textContent =
         dataMessage.message;
       chatBotBody.appendChild(outGoingMessageDiv);
+      if (chatbotContainer) {
+        setTimeout(() => {
+          chatbotContainer.scrollTo({
+            top: chatbotContainer.scrollHeight,
+            behavior: "smooth",
+          });
+        }, 100); 
+      }
 
       setTimeout(() => {
         const messageContainer = document.createElement("div");
@@ -135,6 +144,7 @@ function Chatbot() {
 
         messageContainer.appendChild(img);
         messageContainer.appendChild(typingIndicator);
+
         chatBotBody.appendChild(messageContainer);
 
         setTimeout(() => {
@@ -156,7 +166,15 @@ function Chatbot() {
           }
         }, 0);
 
-        generateBotResponse(messageContainer);
+        generateBotResponse(messageContainer).then(() => {
+          setTimeout(() => {
+            chatbotContainer.scrollTo({
+              top: chatbotContainer.scrollHeight,
+              behavior: "smooth",
+            });
+          }, 100);
+        });
+        
       }, 700);
     };
 
@@ -193,7 +211,7 @@ function Chatbot() {
           </span>
         </div>
 
-        <div className="overflow-y-auto h-[55vh] overflow-x-hidden">
+        <div className="overflow-y-auto h-[55vh] overflow-x-hidden chatbot-container">
           <div className="chatbot-body p-2 w-full text-sm ">
             <div className="flex gap-2  my-2">
               <img
