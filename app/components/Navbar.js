@@ -13,7 +13,9 @@ function Navbar({Sidebarbtn,icon}) {
         </div>
 
         <div>
-          <img className='rounded-full h-7 w-7' src="/" alt="profile" />
+          <a href="https://github.com/UMANG-2003" className='shadow-inner shadow-purple-900 flex gap-1 items-center text-white bg-white border-2 border-white p-1 rounded-full'>  
+          <img className='rounded-full w-7 h-5' src="/github.png" alt="profile" />
+          </a>
         </div>
     </nav>
   )

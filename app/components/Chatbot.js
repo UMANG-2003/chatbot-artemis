@@ -115,7 +115,7 @@ function Chatbot() {
             top: chatbotContainer.scrollHeight,
             behavior: "smooth",
           });
-        }, 100); 
+        }, 100);
       }
 
       setTimeout(() => {
@@ -156,11 +156,11 @@ function Chatbot() {
             top: chatbotContainer.scrollHeight,
             behavior: "smooth",
           });
-        },0);
+        }, 0);
 
         messageContainer.appendChild(img);
         messageContainer.appendChild(typingIndicator);
-       
+
         chatBotBody.appendChild(messageContainer);
 
         setTimeout(() => {
@@ -190,7 +190,6 @@ function Chatbot() {
             });
           }, 100);
         });
-        
       }, 700);
     };
 
