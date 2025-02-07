@@ -141,10 +141,16 @@ function Chatbot() {
           span.appendChild(dot);
           typingIndicator.appendChild(span);
         }
+        setTimeout(() => {
+          chatbotContainer.scrollTo({
+            top: chatbotContainer.scrollHeight,
+            behavior: "smooth",
+          });
+        },0);
 
         messageContainer.appendChild(img);
         messageContainer.appendChild(typingIndicator);
-
+       
         chatBotBody.appendChild(messageContainer);
 
         setTimeout(() => {
@@ -211,7 +217,7 @@ function Chatbot() {
           </span>
         </div>
 
-        <div className="overflow-y-auto h-[52vh] overflow-x-hidden chatbot-container">
+        <div className="overflow-y-auto h-[54vh] overflow-x-hidden chatbot-container">
           <div className="chatbot-body p-2 w-full text-sm ">
             <div className="flex gap-2  my-2">
               <img
