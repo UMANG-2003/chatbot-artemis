@@ -218,7 +218,7 @@ function Chatbot() {
             <input
               type="text"
               placeholder="ask anything....."
-              className="bg-transparent w-44 rounded-full px-2 text-xs"
+              className="bg-transparent w-44 rounded-full px-2 text-xs text-white bg-black"
               id="message-input"
             ></input>
             <div className="chat-btn flex gap-1">
