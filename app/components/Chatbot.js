@@ -1,4 +1,5 @@
 import {
+  faClose,
   faFile,
   faSmile,
   faUpLong,
@@ -204,14 +205,14 @@ function Chatbot() {
 
   return (
     <>
-      <div className="h-[70vh] chatbot shadow-gray-700 border-2 border-gray-600 mx-auto bg-gray-700 w-72 my-10 rounded-lg shadow-md relative">
+      <div className="h-[70vh] chatbot shadow-gray-700 border-2 border-gray-600 mx-auto bg-gray-700 w-72 my-10 rounded-lg shadow-md fixed top-16 right-20 max-md:top-16 max-md:left-10">
         <div className="chatbot-header bg-indigo-700 flex justify-between p-2 rounded-t-lg sticky top-0 z-5">
           <div className="flex gap-2 items-center">
             <img className="h-7" src="/chatbot logo.png" alt="" />
             <span className="font-bold text-xs">ARTEMIS</span>
           </div>
           <span>
-            <FontAwesomeIcon icon={faSmile}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
           </span>
         </div>
 

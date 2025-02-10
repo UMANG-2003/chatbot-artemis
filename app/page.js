@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import Chatbot from "./components/Chatbot";
+import Interface from "./components/Interface";
 
 
 export default function Home() {
@@ -62,14 +63,17 @@ export default function Home() {
 
   return (
     <>
+    <div className="overflow-x-hidden">
       <Navbar Sidebarbtn={Sidebarbtn} icon={icon} />
       <Sidebar ref={sidebarRef} />
+      <Interface />
       <div>
-        <img className="w-10 absolute right-7 bottom-10 cursor-pointer rounded-full rounded-tl-none" src="/chatbot logo.png" onClick={openChatbot} alt="" />
+        <img className="w-10 fixed right-5 bottom-8 cursor-pointer rounded-full" src="/chatbot logo.png" onClick={openChatbot} alt="" />
 
-     <div className="bot-interface">
+     <div className="bot-interface hide">
        <Chatbot></Chatbot>
      </div>
+      </div>
       </div>
     </>
   );
