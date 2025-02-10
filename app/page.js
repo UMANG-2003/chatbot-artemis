@@ -53,13 +53,24 @@ export default function Home() {
     }
   };
 
+  const openChatbot = () => {
+    const chatbot = document.querySelector(".bot-interface");
+    chatbot.classList.toggle("hide")
+  }
+
 
 
   return (
     <>
       <Navbar Sidebarbtn={Sidebarbtn} icon={icon} />
       <Sidebar ref={sidebarRef} />
-      <Chatbot></Chatbot>
+      <div>
+        <img className="w-10 absolute right-7 bottom-10 cursor-pointer rounded-full rounded-tl-none" src="/chatbot logo.png" onClick={openChatbot} alt="" />
+
+     <div className="bot-interface">
+       <Chatbot></Chatbot>
+     </div>
+      </div>
     </>
   );
 }

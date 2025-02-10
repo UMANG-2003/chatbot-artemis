@@ -35,3 +35,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #3639d7 #060906;
 }
+
+.hide{
+  display: none;
+}

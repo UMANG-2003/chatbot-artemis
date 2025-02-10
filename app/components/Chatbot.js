@@ -1,16 +1,5 @@
 import {
-  faAdd,
-  faCake,
-  faCar,
-  faChevronDown,
-  faClose,
-  faClosedCaptioning,
-  faCross,
   faFile,
-  faNairaSign,
-  faNavicon,
-  faNotesMedical,
-  faNoteSticky,
   faSmile,
   faUpLong,
 } from "@fortawesome/free-solid-svg-icons";
@@ -222,7 +211,7 @@ function Chatbot() {
             <span className="font-bold text-xs">ARTEMIS</span>
           </div>
           <span>
-            <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faSmile}></FontAwesomeIcon>
           </span>
         </div>
 
