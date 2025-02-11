@@ -74,7 +74,7 @@ export default function Home() {
       <Sidebar ref={sidebarRef} />
       <Interface />
       <div>
-        <img ref={imgBotToggle} className="w-10 fixed right-5 bottom-8 cursor-pointer rounded-full border-2 border-white bg-purple-950 p-1" src="/chatbot logo.png" onClick={openChatbot} alt="" />
+        <img ref={imgBotToggle} className="w-10 fixed right-5 bottom-8 cursor-pointer rounded-full border-2 border-white bg-purple-950 z-10 p-1" src="/chatbot logo.png" onClick={openChatbot} alt="" />
 
      <div className="bot-interface hide">
        <Chatbot></Chatbot>
