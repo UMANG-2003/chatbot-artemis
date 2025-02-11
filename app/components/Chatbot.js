@@ -212,7 +212,7 @@ function Chatbot() {
             <span className="font-bold text-xs">ARTEMIS</span>
           </div>
           <span>
-            <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faSmile}></FontAwesomeIcon>
           </span>
         </div>
 
