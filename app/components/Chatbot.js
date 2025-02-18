@@ -1,5 +1,4 @@
 import {
-  faClose,
   faFile,
   faSmile,
   faUpLong,
