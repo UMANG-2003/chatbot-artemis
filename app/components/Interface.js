@@ -165,8 +165,10 @@ function Interface() {
           >
             CHATBOT
           </p>
+          <div className="my-14 flex justify-center max-md:my-2">
+           
+          </div>
         </div>
-        <div></div>
       </div>
 
       <div className="container mx-auto p-4 md:p-8  max-md:mt-6">
