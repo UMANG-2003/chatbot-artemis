@@ -4,7 +4,7 @@ import React from 'react'
 function BottomNav() {
   return (
     <div className="md:hidden fixed bottom-0 left-0 z-20 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-800 dark:border-gray-600">
-    <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium shadow-2xl shadow-black">
+    <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium pt-2 shadow-2xl shadow-black">
       {[
         {
           name: "Home",
