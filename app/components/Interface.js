@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 const InfoCard = ({ title, description, icon }) => {
   return (
@@ -103,6 +104,8 @@ function Interface() {
 
   const textRef1 = useRef(null);
   const textRef2 = useRef(null);
+  const textRef3 = useRef(null);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const letters = textRef1.current.innerText.split("");
@@ -129,6 +132,19 @@ function Interface() {
     });
 
     gsap.fromTo(
+      textRef3.current,
+      { opacity: 0, scale: 0.5, rotate: -10 },
+      {
+        opacity: 1,
+        scale: 1,
+        rotate: 0,
+        duration: 1.5,
+        ease: "elastic.out(1, 0.5)",
+        delay: 1,
+      }
+    );
+
+    gsap.fromTo(
       textRef2.current,
       { opacity: 0, scale: 0.5, rotate: -10 },
       {
@@ -140,6 +156,16 @@ function Interface() {
         delay: 1,
       }
     );
+
+    gsap.to(imgRef.current, {
+      y: -2,
+      duration: 0.6,
+      repeat: -1,
+      yoyo: true,
+      ease: "myBounce-squash",
+    });
+
+  
   }, []);
 
   return (
@@ -165,8 +191,21 @@ function Interface() {
           >
             CHATBOT
           </p>
-          <div className="my-14 flex justify-center max-md:my-2">
-           
+          <div ref={textRef3} className="my-14 flex justify-center max-md:my-2">
+            <Link href={"/UserSection"}>
+            <button
+              type="button"
+              className="flex items-center max-md:ml-2 gap-2 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium text-sm px-5 py-2.5 text-center me-2 mb-2 rounded-full max-md:py-1.5 max-md:px-3 "
+              >
+              <img
+                ref={imgRef}
+                src="/chatbot logo.png"
+                className="w-8 max-md:w-6 rounded-full"
+                alt=""
+                />
+              <p className="font-bold">ARTEMIS</p>
+            </button>
+                </Link>
           </div>
         </div>
       </div>
