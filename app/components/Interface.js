@@ -38,7 +38,7 @@ function Interface() {
       ),
     },
     {
-      title: "User-Friendly",
+      title: "Easy to Use",
       description: "Intuitive interface designed for seamless user experience.",
       icon: (
         <svg
@@ -78,11 +78,9 @@ function Interface() {
         </svg>
       ),
     },
-
     {
-      title: "Secure & Private",
-      description:
-        "Your data is safe with our robust security measures and privacy policy.",
+      title: "User Friendly",
+      description: "Easy-to-use interface designed for a seamless user experience.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +93,8 @@ function Interface() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M12 15v2m-6 4v-6a12 12 0 1124 0 12 12 0 01-24 0z"
+            d="M12 2a2 2 0 0 1 2 2v6h1V4a2 2 0 1 1 4 0v8h1V6a2 2 0 1 1 4 0v12a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8a2 2 0 1 1 4 0v4h1V4a2 2 0 0 1 2-2z"
+
           />
         </svg>
       ),

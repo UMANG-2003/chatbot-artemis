@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 function Navbar({ Sidebarbtn, icon }) {
   return (
     <nav className="bg-gray-800 w-full h-16 flex items-center justify-between p-4">
@@ -24,7 +25,7 @@ function Navbar({ Sidebarbtn, icon }) {
         <ol className="inline-flex items-center space-x-1 md:space-x-2 gap-7 rtl:space-x-reverse">
           <li className="inline-flex items-center">
             <a
-              href="#"
+              href="/"
               className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
             >
               <svg
@@ -42,18 +43,20 @@ function Navbar({ Sidebarbtn, icon }) {
           <li>
             <div className="flex items-center">
               <a
-                href="#"
+                href="/UserSection"
                 className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
               >
-                Templates
+               Chatbot
               </a>
             </div>
           </li>
           <li aria-current="page">
             <div className="flex items-center">
+              <Link href={"/Aboutme"}>
               <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
-                Flowbite
+               About
               </span>
+              </Link>
             </div>
           </li>
         </ol>

@@ -1,5 +1,5 @@
 "use client";
-import FianalNav from "../components/FianalNav";
+import FinalNav from "../components/FinalNav";
 import { faFile, faSmile, faUpLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
@@ -202,7 +202,7 @@ function page() {
   }, []);
   return (
     <>
-      <FianalNav></FianalNav>
+      <FinalNav></FinalNav>
       <div className="h-[80vh]">
         <div className="overflow-y-auto max-h-screen overflow-x-hidden chatbot-container max-md:h-[67vh] h-[80vh]">
           <div className="chatbot-body p-2 w-full text-sm ">

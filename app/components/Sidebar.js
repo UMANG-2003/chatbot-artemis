@@ -8,9 +8,12 @@ const Sidebar = forwardRef((props, ref) => {
         <Link href={"/"}>
         <li className="mb-4 cursor-pointer bg-gray-600 w-full p-3 shadow-md shadow-gray-600">Home</li>
         </Link>
+        <Link href={"/Aboutme"}>
         <li className="mb-4 cursor-pointer bg-gray-600 w-full p-3 shadow-md shadow-gray-600">About</li>
-        <li className="mb-4 cursor-pointer bg-gray-600 w-full p-3 shadow-md shadow-gray-600">Shop</li>
-        <li className="mb-4 cursor-pointer bg-gray-600 w-full p-3 shadow-md shadow-gray-600">Content</li>
+        </Link>
+        <Link href={"/UserSection"}>
+        <li className="mb-4 cursor-pointer bg-gray-600 w-full p-3 shadow-md shadow-gray-600">Chatbot</li>
+        </Link>
       </ul>
     </div>
   );

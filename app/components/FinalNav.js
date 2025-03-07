@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import React, { useRef, useState } from "react";
 import gsap from "gsap";
 
-function FianalNav() {
+function FinalNav() {
       const sidebarRef = useRef(null);
       const [icon, setIcon] = useState(faBars);
       const [isExpanded, setIsExpanded] = useState(false);
@@ -68,4 +68,4 @@ function FianalNav() {
     
 }
 
-export default FianalNav
+export default FinalNav

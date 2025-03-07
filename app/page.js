@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import Chatbot from "./components/Chatbot";
 import Interface from "./components/Interface";
 import Section1 from "./components/Section1";
-import FianalNav from "./components/FianalNav";
+import FinalNav from "./components/FinalNav";
 import BottomNav from "./components/BottomNav";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <FianalNav></FianalNav>
+        <FinalNav></FinalNav>
         <Interface />
         <Section1 />
         <div>
@@ -35,6 +35,7 @@ export default function Home() {
           <div className="bot-interface hide">
             <Chatbot></Chatbot>
           </div>
+
         </div>
 
      <BottomNav></BottomNav>
