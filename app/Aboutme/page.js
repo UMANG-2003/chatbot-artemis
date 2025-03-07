@@ -7,7 +7,7 @@ function Aboutme() {
     <>
       <FinalNav></FinalNav>
       <div className="m-5 h-max-screen">
-        <div className="conatiner bg-gray-600 w-[85vw] md:w-[50vw] h-fit mx-auto p-4 rounded-xl">
+        <div className="conatiner bg-gray-600 w-[85vw] md:w-[50vw] h-fit mx-auto px-4 py-2 rounded-xl">
           <img
             src="/chatbot logo.png"
             className="w-14 mx-auto my-3 rounded-full"
