@@ -18,8 +18,8 @@ function page() {
       message: null,
     };
 
-    const API_KEY = "AIzaSyDZNehi_jPx7HK5ZT9WjoYZnPqFUx79w1Y";
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+  const API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
     const generateBotResponse = async (messageContainer) => {
       const requestOptions = {
