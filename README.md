@@ -1,37 +1,98 @@
-hey ths is umang
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📦 Gemini Chatbot with React & Next.js
+This project is an interactive chatbot built with React, Next.js, and Google's Gemini (Generative AI) using the official @google/genai SDK and fetch API.
 
-## Getting Started
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/3935a9ea-ac57-4624-95cc-5868dbd05f93" />
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 Features
+____________________________________________________
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🤖 Real-time responses from Gemini 1.5 Flash
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+💬 Dynamic message display (bot & user)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌐 Fully responsive UI with Tailwind CSS
 
-## Learn More
+🔒 Environment-based API key handling
 
-To learn more about Next.js, take a look at the following resources:
+⚙️ Easily extendable and customizable
+___________________________________________________
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Tech Stack
+____________________
+Framework: Next.js
 
-## Deploy on Vercel
+Styling: Tailwind CSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AI API: Google Gemini
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Environment Handling: dotenv
+
+Icons: FontAwesome
+
+
+chatbot-artemis/
+│
+├── app/
+│   ├── UserSection/
+│   │   └── page.js      ← Main chatbot logic
+│   └── test.js          ← API key or test script
+├── public/              ← Static assets
+├── .env.local           ← Environment variables
+├── package.json         ← Dependencies and scripts
+└── README.md            ← You're here
+
+
+
+1. Clone the Repository
+  git clone https://github.com/your-username/chatbot-artemis.git
+  cd chatbot-artemis
+
+2. Install Dependencies
+   npm install
+
+🧠 How It Works
+_________________________________________
+User input is captured and displayed.
+
+The input is sent to Google Gemini API via a POST request.
+
+Gemini generates a response.
+
+The response is dynamically rendered inside the chat UI.
+
+{
+  "contents": [
+    {
+      "role": "user",
+      "parts": [{ "text": "Your message here" }]
+    }
+  ]
+}
+
+
+✨ Customize
+__________________________________________
+You can:
+
+Change models (e.g., gemini-pro, gemini-1.5-pro)
+
+Modify styles in Tailwind (app/globals.css or in components)
+
+Add more context-aware features like history, memory, etc.
+
+
+📌 Notes
+Ensure your .env.local is not committed to version control.
+
+Only expose API keys with the NEXT_PUBLIC_ prefix if it's safe (Gemini Flash keys are usage-metered, not per-user authenticated).
+
+.
+
+🧑‍💻 Author
+ARTEMIS
+Feel free to connect with me or contribute!
+
+
+
