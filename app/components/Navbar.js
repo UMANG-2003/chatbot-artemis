@@ -1,77 +1,74 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+
 function Navbar({ Sidebarbtn, icon }) {
   return (
-    <nav className="bg-gray-800 w-full h-16 flex items-center justify-between p-4">
-      <div className="flex items-center text-white gap-3 md:hidden">
+    <nav className="w-full h-16 px-6 flex items-center justify-between backdrop-blur-md bg-white/5 border-b border-white/10 shadow-md z-50 font-[Poppins]">
+      
+      {/* Left: Mobile Menu Button */}
+      <div className="flex items-center gap-3 md:hidden">
         <FontAwesomeIcon
           icon={icon}
-          className="h-6 cursor-pointer"
+          className="h-6 cursor-pointer hover:text-purple-400 transition-colors"
           onClick={Sidebarbtn}
         />
       </div>
-        <div className="flex gap-2 items-center">
-          <img className="h-8" src="/chatbot logo.png" alt="" />
-          <span className="font-extrabold text-sm max-md:text-lg">
-          Artemis Chatbot
-        </span>
-        </div>
 
+      {/* Center: Logo + Brand */}
+      <div className="flex items-center gap-3 text-white font-semibold tracking-wide">
+        <img src="/chatbot logo.png" className="h-8" alt="Logo" />
+        <span className="text-white text-lg font-bold">Artemis Chatbot</span>
+      </div>
+
+      {/* Breadcrumb Navigation */}
       <nav
-        className="flex px-5 py-3 text-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800 max-md:hidden mr-24"
+        className="hidden md:flex text-sm text-gray-300 items-center gap-7 mr-16"
         aria-label="Breadcrumb"
       >
-        <ol className="inline-flex items-center space-x-1 md:space-x-2 gap-7 rtl:space-x-reverse">
-          <li className="inline-flex items-center">
-            <a
-              href="/"
-              className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
-            >
-              <svg
-                className="w-3 h-3 me-2.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-              </svg>
-              Home
-            </a>
-          </li>
-          <li>
-            <div className="flex items-center">
-              <a
-                href="/UserSection"
-                className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
-              >
-               Chatbot
-              </a>
-            </div>
-          </li>
-          <li aria-current="page">
-            <div className="flex items-center">
-              <Link href={"/Aboutme"}>
-              <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
-               About
-              </span>
-              </Link>
-            </div>
-          </li>
-        </ol>
+        <Link
+          href="/"
+          className="hover:text-purple-400 transition-colors flex items-center gap-1"
+        >
+          <svg
+            className="w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M10 3.172l-6.586 6.586a1 1 0 001.414 1.414L10 5.414l5.172 5.172a1 1 0 001.414-1.414L10 3.172z" />
+          </svg>
+          Home
+        </Link>
+        <Link
+          href="/UserSection"
+          className="hover:text-purple-400 transition-colors"
+        >
+          Chatbot
+        </Link>
+        <Link
+          href="/Aboutme"
+          className=" hover:text-purple-400 transition-colors"
+        >
+          About
+        </Link>
       </nav>
 
+      {/* GitHub Button */}
       <div>
         <a
           href="https://github.com/UMANG-2003"
-          className="shadow-inner shadow-purple-900 flex gap-1 items-center text-white bg-white dark:bg-white dark:border-white border-2 border-white p-1 rounded-full"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-purple-400 hover:bg-purple-400 transition duration-300"
         >
           <img
-            className="rounded-full w-7 h-5"
             src="/github.png"
-            alt="profile"
+            alt="GitHub"
+            className="w-6 h-6 rounded-full"
           />
+          <span className="hidden md:inline text-sm text-purple-100 group-hover:text-black font-medium transition">
+            GitHub
+          </span>
         </a>
       </div>
     </nav>

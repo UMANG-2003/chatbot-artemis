@@ -5,49 +5,57 @@ import FinalNav from "../components/FinalNav";
 function Aboutme() {
   return (
     <>
-      <FinalNav></FinalNav>
-      <div className="m-5 h-max-screen">
-        <div className="conatiner bg-gray-600 w-[85vw] md:w-[50vw] h-fit mx-auto px-4 py-2 rounded-xl">
+      <FinalNav />
+      <div className="py-10 min-h-screen font-poppins text-white bg-gradient-to-br from-black via-gray-900 to-black">
+        <div className="container w-[85vw] md:w-[50vw] h-fit mx-auto px-6 py-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 shadow-lg shadow-violet-500/20">
+
           <img
             src="/about.png"
-            className="w-14 mx-auto my-3 rounded-full"
+            className="w-16 mx-auto mb-5 rounded-full shadow-lg"
             alt="photo"
           />
-          <div className="profile rounded-lg p-4 bg-gray-800 cursor-pointer">
-            <div className="">
-              {[
-                { title: "Name:", content: "UMANG" },
-                {
-                  title: "Profession:",
-                  content:
-                    "BTech Student | Web Developer | Python & C++ Enthusiast.",
-                },
-                {
-                  title: "Learning:",
-                  content:
-                    "Full-Stack Development, React, SQL, AI & Machine Learning.",
-                },
-                {
-                  title: "Tech Stack:",
-                  content: "React, GSAP, SQL, Python, C++",
-                },
-              ].map((item, index) => {
-                return (
-                  <div key={index}>
-                    <p className="text-sm my-3 hover:text-gray-500">
-                      <strong>{item.title}</strong> {item.content}
-                    </p>
-                    <hr />
-                  </div>
-                );
-              })}
-            </div>
+
+          <div className="rounded-lg p-4 bg-gray-900/80 hover:shadow-violet-600/40 transition duration-300 shadow-md">
+            {[
+              { title: "Name:", content: "UMANG" },
+              {
+                title: "Profession:",
+                content:
+                  "BTech Student | Web Developer | Python & C++ Enthusiast.",
+              },
+              {
+                title: "Learning:",
+                content:
+                  "Full-Stack Development, React, SQL, AI & Machine Learning.",
+              },
+              {
+                title: "Tech Stack:",
+                content: "React, GSAP, SQL, Python, C++",
+              },
+            ].map((item, index) => (
+              <div key={index}>
+                <p className="text-sm my-3 hover:text-violet-400">
+                  <strong className="text-violet-300">{item.title}</strong>{" "}
+                  {item.content}
+                </p>
+                <hr className="border-gray-700" />
+              </div>
+            ))}
           </div>
-          <div className="flex justify-center mt-3">
-          <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Contact me</button>
+
+          {/* Contact Button */}
+          <div className="flex justify-center mt-5">
+            <button
+              type="button"
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-fuchsia-500 hover:to-violet-500 text-white font-semibold px-6 py-2 rounded-full shadow-md shadow-violet-500/40 transition-all"
+            >
+              Contact me
+            </button>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-3 my-4 ">
+
+        {/* Social Icons */}
+         <div className="flex items-center justify-center gap-3 my-4 ">
         {[
               {
                 d: "M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z",
@@ -96,8 +104,9 @@ function Aboutme() {
               );
             })}
         </div>
+      
       </div>
-      <BottomNav></BottomNav>
+      <BottomNav />
     </>
   );
 }
