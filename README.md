@@ -21,7 +21,7 @@ ___________________________________________________
 
 🛠️ Tech Stack
 ____________________
-Framework: Next.js
+Framework: Next js
 
 Styling: Tailwind CSS
 
